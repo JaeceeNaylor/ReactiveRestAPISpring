@@ -1,0 +1,21 @@
+package com.example.products.api;
+
+import com.example.products.domain.Product;
+import com.example.products.repository.ProductRepository;
+import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+@RestController
+@RequestMapping("/api/v1/products")
+public class ProductController {
+    private final ProductRepository repo;
+
+    public ProductController(ProductRepository repo) { this.repo = repo; }
+
+    @GetMapping
+    public Flux<Product> getAll() { return repo.findAll(); }
+
+    @PostMapping
+    public Mono<Product> create(@RequestBody Product product) { return repo.save(product); }
+}

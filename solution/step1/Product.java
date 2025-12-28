@@ -1,0 +1,11 @@
+package com.example.products.domain;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
+
+@Table("products")
+public class Product {
+    @Id
+    private Long id;
+    private String name;
+}

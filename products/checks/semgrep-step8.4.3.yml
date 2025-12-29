@@ -1,0 +1,9 @@
+rules:
+  - id: step8.4.3-search-return
+    languages: [java]
+    severity: ERROR
+    message: "Step 8.4 incomplete: Add a @GetMapping endpoint that searches Products by name return statment."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductControllerV2.java
+    pattern-regex: 'return\s+repo\.findAll\(\)\s*\.filter\(\s*p\s*->\s*p\.getName\(\)\.toLowerCase\(\)\.contains\(\s*name\.toLowerCase\(\)\s*\)\s*\)\s*;'

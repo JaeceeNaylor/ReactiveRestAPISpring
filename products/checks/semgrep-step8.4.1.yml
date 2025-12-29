@@ -1,0 +1,13 @@
+rules:
+  - id: step8.4.1-getid
+    languages: [java]
+    severity: ERROR
+    message: "Step 8.4 incomplete: Add a @GetMapping endpoint that returns a Product by ID."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductControllerV2.java
+    pattern: |
+      @GetMapping("/{id}")
+      public Mono<Product> getById(@PathVariable Long id) {
+        return repo.findById(id);
+      }

@@ -1,0 +1,11 @@
+rules:
+  - id: step8.3.2-constructor
+    languages: [java]
+    severity: ERROR
+    message: "Step 8.3 incomplete: Add a constructor that accepts ProductRepository."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductControllerV2.java
+    pattern: |
+      public ProductControllerV2(ProductRepository repo) {
+        this.repo = repo;}

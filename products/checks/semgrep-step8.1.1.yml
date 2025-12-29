@@ -1,0 +1,9 @@
+rules:
+  - id: step8.1.1-price-field
+    languages: [java]
+    severity: ERROR
+    message: "Step 8.1 incomplete: Add `private BigDecimal price;` to Product."
+    paths:
+      include:
+        - src/main/java/com/example/products/domain/Product.java
+    pattern-regex: 'private\s+BigDecimal\s+price\s*;'

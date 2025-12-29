@@ -1,0 +1,9 @@
+rules:
+  - id: step8.2.11-import-duration
+    languages: [java]
+    severity: ERROR
+    message: "Step 8.2 incomplete: Add package com.example.products.api;"
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductControllerV2.java
+    pattern: package com.example.products.api;

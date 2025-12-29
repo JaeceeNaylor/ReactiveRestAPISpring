@@ -1,0 +1,13 @@
+rules:
+  - id: step8.3.5-postmapping
+    languages: [java]
+    severity: ERROR
+    message: "Step 8.3 incomplete: Add a @PostMapping endpoint that accepts a Product request body."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductControllerV2.java
+    pattern: |
+      @PostMapping
+      public Mono<Product> create(@RequestBody Product product) {
+        return repo.save(product);
+      }

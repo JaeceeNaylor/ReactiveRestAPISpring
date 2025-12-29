@@ -1,0 +1,9 @@
+rules:
+  - id: step8.3.1-getmapping
+    languages: [java]
+    severity: ERROR
+    message: "Step 8.3 incomplete: Add a @GetMapping endpoint returning Flux<Product>."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductControllerV2.java
+    pattern: "@GetMapping"

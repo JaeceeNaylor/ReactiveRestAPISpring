@@ -1,0 +1,11 @@
+rules:
+  - id: step8.2.4-missing-table-import-1
+    languages: [java]
+    severity: ERROR
+    message: "Step 8.2 incomplete: Add import com.example.products.domain.Product;"
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductControllerV2.java
+    patterns:
+      - pattern: |
+          import com.example.products.domain.Product;

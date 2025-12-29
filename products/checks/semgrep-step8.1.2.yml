@@ -1,0 +1,9 @@
+rules:
+  - id: step8.1.2-bigdecimal-import
+    languages: [java]
+    severity: ERROR
+    message: "Step 8.1 incomplete: Add `import java.math.BigDecimal;` to Product."
+    paths:
+      include:
+        - src/main/java/com/example/products/domain/Product.java
+    pattern-regex: 'import\s+java\.math\.BigDecimal\s*;'

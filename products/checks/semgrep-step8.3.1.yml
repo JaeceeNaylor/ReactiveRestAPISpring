@@ -1,0 +1,9 @@
+rules:
+  - id: step8.3.1-repo-field
+    languages: [java]
+    severity: ERROR
+    message: "Step 8.3 incomplete: Add a private final ProductRepository field."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductControllerV2.java
+    pattern: "private final ProductRepository repo;"

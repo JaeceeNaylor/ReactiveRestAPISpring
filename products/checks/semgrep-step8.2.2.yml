@@ -1,0 +1,9 @@
+rules:
+  - id: step8.2.2-v2-requestmapping
+    languages: [java]
+    severity: ERROR
+    message: 'Step 8.2 incomplete: Add @RequestMapping("/api/v2/products") to ProductControllerV2.'
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductControllerV2.java
+    pattern-regex: '@RequestMapping\("/api/v2/products"\)'

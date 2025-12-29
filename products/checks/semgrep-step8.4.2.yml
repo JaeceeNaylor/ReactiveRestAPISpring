@@ -1,0 +1,13 @@
+rules:
+  - id: step8.4.2-search-by-name
+    languages: [java]
+    severity: ERROR
+    message: "Step 8.4 incomplete: Add a @GetMapping endpoint that searches Products by name."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductControllerV2.java
+    pattern: |
+      @GetMapping("/search")
+      public Flux<Product> search(@RequestParam String name) {
+        ...
+      }

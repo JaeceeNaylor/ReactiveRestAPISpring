@@ -1,0 +1,9 @@
+rules:
+  - id: step8.2.1-v2-controller-class
+    languages: [java]
+    severity: ERROR
+    message: "Step 8.2 incomplete: Create class ProductControllerV2 in ProductControllerV2.java."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductControllerV2.java
+    pattern-regex: 'public\s+class\s+ProductControllerV2'

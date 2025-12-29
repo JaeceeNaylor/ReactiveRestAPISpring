@@ -1,0 +1,9 @@
+rules:
+  - id: step8.2.9-import-mediatype
+    languages: [java]
+    severity: ERROR
+    message: "Step 8.2 incomplete: Add import org.springframework.http.MediaType;"
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductControllerV2.java
+    pattern: import org.springframework.http.MediaType;

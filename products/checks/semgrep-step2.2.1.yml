@@ -8,8 +8,9 @@ rules:
       include:
         - products/src/main/java/com/example/products/domain/Product.java
     patterns:
-      - pattern: import org.springframework.data.annotation.Id;
       - pattern: |
-          @Id
-          private Long id;
-      - pattern: class Product
+          @Table("products")
+          public class Product {
+            @Id
+            private Long id;
+          }

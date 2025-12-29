@@ -1,0 +1,9 @@
+rules:
+  - id: step3.1.2-import-reactivecrudrepository
+    languages: [java]
+    severity: ERROR
+    message: "Step 3.1 incomplete: Add import org.springframework.data.repository.reactive.ReactiveCrudRepository;"
+    paths:
+      include:
+        - src/main/java/com/example/products/repository/ProductRepository.java
+    pattern: import org.springframework.data.repository.reactive.ReactiveCrudRepository;

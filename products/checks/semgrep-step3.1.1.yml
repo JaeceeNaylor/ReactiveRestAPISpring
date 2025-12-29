@@ -1,0 +1,9 @@
+rules:
+  - id: step3.1.1-import-product
+    languages: [java]
+    severity: ERROR
+    message: "Step 3.1 incomplete: Add import com.example.products.domain.Product;"
+    paths:
+      include:
+        - src/main/java/com/example/products/repository/ProductRepository.java
+    pattern: import com.example.products.domain.Product;

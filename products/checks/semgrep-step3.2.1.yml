@@ -1,0 +1,9 @@
+rules:
+  - id: step3.2.1-extends-reactivecrudrepository
+    languages: [java]
+    severity: ERROR
+    message: "Step 3.2 incomplete: ProductRepository must extend ReactiveCrudRepository<Product, Long>."
+    paths:
+      include:
+        - src/main/java/com/example/products/repository/ProductRepository.java
+    pattern: public interface ProductRepository extends ReactiveCrudRepository<Product, Long> {}

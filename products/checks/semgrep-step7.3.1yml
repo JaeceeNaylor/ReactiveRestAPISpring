@@ -1,0 +1,15 @@
+rules:
+  - id: step7.3.1-db-observe-mapping
+    languages: [java]
+    severity: ERROR
+    message: 'Step 7.3 incomplete: Add @GetMapping("/db-observe") and method.'
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductController.java
+    pattern: |
+      @GetMapping("/db-observe")
+      public Flux<Product> getAllObserved() {
+          return Observation
+              .createNotStarted("products.db.findAll", Observation.Context::new)
+              .observe(() -> repo.findAll());
+      }

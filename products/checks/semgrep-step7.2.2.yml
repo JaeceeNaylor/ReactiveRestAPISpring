@@ -1,0 +1,9 @@
+rules:
+  - id: step7.2.2-observe-create
+    languages: [java]
+    severity: ERROR
+    message: 'Step 7.2 incomplete: Add @Observed(name = "products.http.create") above create.'
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductController.java
+    pattern: '@Observed(name = "products.http.create")'

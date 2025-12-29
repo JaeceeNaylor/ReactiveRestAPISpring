@@ -1,0 +1,9 @@
+rules:
+  - id: step5.1.2-import-duration
+    languages: [java]
+    severity: ERROR
+    message: "Step 5.1 incomplete: Add import java.time.Duration;"
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductController.java
+    pattern: import java.time.Duration;

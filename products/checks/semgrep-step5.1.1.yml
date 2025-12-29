@@ -1,0 +1,9 @@
+rules:
+  - id: step5.1.1-import-mediatype
+    languages: [java]
+    severity: ERROR
+    message: "Step 5.1 incomplete: Add import org.springframework.http.MediaType;"
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductController.java
+    pattern: import org.springframework.http.MediaType;

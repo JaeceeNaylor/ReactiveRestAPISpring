@@ -30,6 +30,6 @@ public class ProductController {
 
     @GetMapping(value = "/stream", produces = MediaType.APPLICATION_NDJSON_VALUE)
     public Flux<Product> streamAll() {
-        return repo.findAll().delayElements(Duration.ofMillis(100)); // backpressure demo
+        return repo.findAll().delayElements(Duration.ofMillis(100));
     }
 }

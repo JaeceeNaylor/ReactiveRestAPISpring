@@ -6,4 +6,4 @@ rules:
     paths:
       include:
         - src/main/java/com/example/products/api/error/GlobalExceptionHandler.java
-    pattern: "return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(problemDetails)"
+    pattern: "return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(problemDetails);"

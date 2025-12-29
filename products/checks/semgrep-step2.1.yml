@@ -1,0 +1,13 @@
+rules:
+  - id: step2.1-product-table-annotation
+    languages: [java]
+    severity: ERROR
+    message: >
+      Step 2.1 incomplete: Add the @Table("products") annotation and import Table in Product.java.
+    paths:
+      include:
+        - src/main/java/com/example/products/domain/Product.java
+    patterns:
+      - pattern: import org.springframework.data.relational.core.mapping.Table;
+      - pattern: '@Table("products")'
+      - pattern: class Product

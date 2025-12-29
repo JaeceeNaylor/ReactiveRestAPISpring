@@ -1,0 +1,15 @@
+rules:
+  - id: step2.2-product-id-field
+    languages: [java]
+    severity: ERROR
+    message: >
+      Step 2.2 incomplete: Add an @Id field `private Long id;` and import Id in Product.java.
+    paths:
+      include:
+        - src/main/java/com/example/products/domain/Product.java
+    patterns:
+      - pattern: import org.springframework.data.annotation.Id;
+      - pattern: |
+          @Id
+          private Long id;
+      - pattern: class Product

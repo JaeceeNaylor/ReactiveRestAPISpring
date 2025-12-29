@@ -1,0 +1,9 @@
+rules:
+  - id: step6.4.4-put-title
+    languages: [java]
+    severity: ERROR
+    message: "Step 6.4 incomplete: Add title to problemDetails."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/error/GlobalExceptionHandler.java
+    pattern: 'problemDetails.put("title", "Internal Server Error");'

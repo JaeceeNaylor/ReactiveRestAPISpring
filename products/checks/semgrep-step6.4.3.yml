@@ -1,0 +1,9 @@
+rules:
+  - id: step6.4.3-put-type
+    languages: [java]
+    severity: ERROR
+    message: "Step 6.4 incomplete: Add type to problemDetails."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/error/GlobalExceptionHandler.java
+    pattern: 'problemDetails.put("type", "about:blank");'

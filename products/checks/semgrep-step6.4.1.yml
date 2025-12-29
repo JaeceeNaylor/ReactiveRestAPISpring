@@ -1,0 +1,9 @@
+rules:
+  - id: step6.4.1-problem-details-map
+    languages: [java]
+    severity: ERROR
+    message: "Step 6.4 incomplete: Create `Map<String, Object> problemDetails = new HashMap<>();`"
+    paths:
+      include:
+        - src/main/java/com/example/products/api/error/GlobalExceptionHandler.java
+    pattern: "Map<String, Object> problemDetails = new HashMap<>();"

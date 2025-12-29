@@ -1,0 +1,9 @@
+rules:
+  - id: step6.4.2-return-problem-details
+    languages: [java]
+    severity: ERROR
+    message: "Step 6.4 incomplete: Return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(problemDetails)."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/error/GlobalExceptionHandler.java
+    pattern: "return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(problemDetails)"

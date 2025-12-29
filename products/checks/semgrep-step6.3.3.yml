@@ -1,0 +1,9 @@
+rules:
+  - id: step6.3.3-handle-method-signature
+    languages: [java]
+    severity: ERROR
+    message: "Step 6.3 incomplete: Add method `public ResponseEntity<Map<String, Object>> handle(Exception e)`."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/error/GlobalExceptionHandler.java
+    pattern: "public ResponseEntity<Map<String, Object>> handle(Exception e)"

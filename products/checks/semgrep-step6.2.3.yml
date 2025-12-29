@@ -1,0 +1,9 @@
+rules:
+  - id: step6.2.3-import-map
+    languages: [java]
+    severity: ERROR
+    message: "Step 6.2 incomplete: Add import java.util.Map;"
+    paths:
+      include:
+        - src/main/java/com/example/products/api/error/GlobalExceptionHandler.java
+    pattern: import java.util.Map;

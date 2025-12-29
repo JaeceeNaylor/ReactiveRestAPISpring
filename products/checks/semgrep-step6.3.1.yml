@@ -1,0 +1,9 @@
+rules:
+  - id: step6.3.1-exceptionhandler-annotation
+    languages: [java]
+    severity: ERROR
+    message: "Step 6.3 incomplete: Add @ExceptionHandler(Exception.class) to the handler method."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/error/GlobalExceptionHandler.java
+    pattern: "@ExceptionHandler(Exception.class)"

@@ -1,0 +1,9 @@
+rules:
+  - id: step6.2.1-import-instant
+    languages: [java]
+    severity: ERROR
+    message: "Step 6.2 incomplete: Add import java.time.Instant;"
+    paths:
+      include:
+        - src/main/java/com/example/products/api/error/GlobalExceptionHandler.java
+    pattern: import java.time.Instant;

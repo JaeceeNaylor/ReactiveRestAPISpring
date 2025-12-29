@@ -1,0 +1,9 @@
+rules:
+  - id: step6.1.4-import-responsebody
+    languages: [java]
+    severity: ERROR
+    message: "Step 6.1 incomplete: Add import org.springframework.web.bind.annotation.ResponseBody;"
+    paths:
+      include:
+        - src/main/java/com/example/products/api/error/GlobalExceptionHandler.java
+    pattern: import org.springframework.web.bind.annotation.ResponseBody;

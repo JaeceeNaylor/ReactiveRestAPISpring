@@ -1,0 +1,9 @@
+rules:
+  - id: step6.4.6-put-detail
+    languages: [java]
+    severity: ERROR
+    message: "Step 6.4 incomplete: Add detail to problemDetails."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/error/GlobalExceptionHandler.java
+    pattern: 'problemDetails.put("detail", e.getMessage());'

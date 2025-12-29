@@ -1,0 +1,9 @@
+rules:
+  - id: step6.2.2-import-hashmap
+    languages: [java]
+    severity: ERROR
+    message: "Step 6.2 incomplete: Add import java.util.HashMap;"
+    paths:
+      include:
+        - src/main/java/com/example/products/api/error/GlobalExceptionHandler.java
+    pattern: import java.util.HashMap;

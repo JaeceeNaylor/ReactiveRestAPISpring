@@ -1,0 +1,9 @@
+rules:
+  - id: step6.3.2-responsebody-annotation
+    languages: [java]
+    severity: ERROR
+    message: "Step 6.3 incomplete: Add @ResponseBody to the handler method."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/error/GlobalExceptionHandler.java
+    pattern: "@ResponseBody"

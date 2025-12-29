@@ -1,0 +1,9 @@
+rules:
+  - id: step6.4.5-put-status
+    languages: [java]
+    severity: ERROR
+    message: "Step 6.4 incomplete: Add status to problemDetails."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/error/GlobalExceptionHandler.java
+    pattern: 'problemDetails.put("status", HttpStatus.INTERNAL_SERVER_ERROR.value());'

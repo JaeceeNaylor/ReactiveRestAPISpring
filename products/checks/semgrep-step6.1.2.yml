@@ -1,0 +1,9 @@
+rules:
+  - id: step6.1.2-import-responseentity
+    languages: [java]
+    severity: ERROR
+    message: "Step 6.1 incomplete: Add import org.springframework.http.ResponseEntity;"
+    paths:
+      include:
+        - src/main/java/com/example/products/api/error/GlobalExceptionHandler.java
+    pattern: import org.springframework.http.ResponseEntity;

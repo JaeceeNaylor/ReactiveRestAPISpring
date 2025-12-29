@@ -1,0 +1,9 @@
+rules:
+  - id: step6.4.7-put-instance
+    languages: [java]
+    severity: ERROR
+    message: "Step 6.4 incomplete: Add instance to problemDetails."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/error/GlobalExceptionHandler.java
+    pattern: 'problemDetails.put("instance", Instant.now().toString());'

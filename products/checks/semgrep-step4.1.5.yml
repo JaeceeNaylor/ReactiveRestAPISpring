@@ -1,0 +1,11 @@
+rules:
+  - id: step4.1.5-missing-table-import-5
+    languages: [java]
+    severity: ERROR
+    message: "Step 4.1 incomplete: import reactor.core.publisher.Mono;"
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductController.java
+    patterns:
+      - pattern: |
+          import reactor.core.publisher.Mono;

@@ -1,0 +1,11 @@
+rules:
+  - id: step4.1.3-missing-table-import-3
+    languages: [java]
+    severity: ERROR
+    message: "Step 4.1 incomplete: Add import org.springframework.web.bind.annotation.*;"
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductController.java
+    patterns:
+      - pattern: |
+          import org.springframework.web.bind.annotation.*;

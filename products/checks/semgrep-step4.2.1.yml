@@ -1,0 +1,9 @@
+rules:
+  - id: step4.2.1-restcontroller
+    languages: [java]
+    severity: ERROR
+    message: "Step 4.2 incomplete: Annotate ProductController with @RestController."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductController.java
+    pattern: "@RestController"

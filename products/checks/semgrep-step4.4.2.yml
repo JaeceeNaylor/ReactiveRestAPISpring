@@ -1,0 +1,12 @@
+rules:
+  - id: step4.4.2-getendpoint
+    languages: [java]
+    severity: ERROR
+    message: "Step 4.4 incomplete: Add a GET endpoint returning Flux<Product>."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductController.java
+    pattern: |
+      public Flux<Product> getAll() {
+        return repo.findAll();
+      }

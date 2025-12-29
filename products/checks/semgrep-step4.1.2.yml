@@ -1,0 +1,11 @@
+rules:
+  - id: step4.1.2-missing-table-import-2
+    languages: [java]
+    severity: ERROR
+    message: "Step 4.1 incomplete: Add import com.example.products.repository.ProductRepository;"
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductController.java
+    patterns:
+      - pattern: |
+          import com.example.products.repository.ProductRepository;

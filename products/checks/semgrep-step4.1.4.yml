@@ -1,0 +1,11 @@
+rules:
+  - id: step4.1.4-missing-table-import-4
+    languages: [java]
+    severity: ERROR
+    message: "Step 4.1 incomplete: Add import reactor.core.publisher.Flux;"
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductController.java
+    patterns:
+      - pattern: |
+          import reactor.core.publisher.Flux;

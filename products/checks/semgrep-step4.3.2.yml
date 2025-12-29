@@ -1,0 +1,11 @@
+rules:
+  - id: step4.3.2-constructor
+    languages: [java]
+    severity: ERROR
+    message: "Step 4.3 incomplete: Add a constructor that accepts ProductRepository."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductController.java
+    pattern: |
+      public ProductController(ProductRepository repo) {
+        this.repo = repo;}

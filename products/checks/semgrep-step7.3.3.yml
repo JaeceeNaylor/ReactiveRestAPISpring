@@ -1,0 +1,9 @@
+rules:
+  - id: step7.3.3-return-observation
+    languages: [java]
+    severity: ERROR
+    message: "Step 7.3 incomplete: Return the Observation wrapper around repo.findAll()."
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductController.java
+    pattern-regex: 'return\s+Observation\s*\.?\s*createNotStarted\("products\.db\.findAll",\s*Observation\.Context::new\)\s*\.?\s*observe\(\(\)\s*->\s*repo\.findAll\(\)\)\s*;'

@@ -1,0 +1,11 @@
+rules:
+  - id: step2.3-missing-name-field
+    languages: [java]
+    severity: ERROR
+    message: "Step 2.3 incomplete: Add a private String name field to the Product class."
+    paths:
+      include:
+        - src/main/java/com/example/products/domain/Product.java
+    patterns:
+      - pattern: |
+          private String name;

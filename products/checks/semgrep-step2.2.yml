@@ -6,7 +6,7 @@ rules:
       Step 2.2 incomplete: Add an @Id field `private Long id;` and import Id in Product.java.
     paths:
       include:
-        - src/main/java/com/example/products/domain/Product.java
+        - products/src/main/java/com/example/products/domain/Product.java
     patterns:
       - pattern: import org.springframework.data.annotation.Id;
       - pattern: |

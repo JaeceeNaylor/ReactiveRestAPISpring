@@ -6,7 +6,7 @@ rules:
       Step 2.1 incomplete: Add the @Table("products") annotation and import Table in Product.java.
     paths:
       include:
-        - src/main/java/com/example/products/domain/Product.java
+        - products/src/main/java/com/example/products/domain/Product.java
     patterns:
       - pattern: import org.springframework.data.relational.core.mapping.Table;
       - pattern: '@Table("products")'

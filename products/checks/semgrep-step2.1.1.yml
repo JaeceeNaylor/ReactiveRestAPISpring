@@ -8,10 +8,6 @@ rules:
         - src/main/java/com/example/products/domain/Product.java
     patterns:
       - pattern: |
-          public class Product {
-            ...
-          }
-      - pattern-not: |
           @Table("products")
           public class Product {
             ...

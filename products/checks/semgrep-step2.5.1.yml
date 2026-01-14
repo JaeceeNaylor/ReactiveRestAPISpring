@@ -1,0 +1,11 @@
+rules:
+  - id: step2.5-missing-get-id-getter
+    languages: [java]
+    severity: ERROR
+    message: "Step 2.5 incomplete: Add public Long getId() that returns id."
+    paths:
+      include:
+        - src/main/java/com/example/products/domain/Product.java
+    patterns:
+      - pattern: |
+          public Long getId() { return id; }

@@ -1,0 +1,11 @@
+rules:
+  - id: step2.4-missing-no-args-constructor
+    languages: [java]
+    severity: ERROR
+    message: "Step 2.4 incomplete: Add a public no-args constructor (public Product() {}) to the Product class."
+    paths:
+      include:
+        - src/main/java/com/example/products/domain/Product.java
+    patterns:
+      - pattern: |
+          public Product() {}

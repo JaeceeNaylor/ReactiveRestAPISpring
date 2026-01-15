@@ -6,4 +6,4 @@ rules:
     paths:
       include:
         - src/main/java/com/example/products/api/ProductController.java
-    pattern-regex: 'return\s+Observation\s*\.?\s*createNotStarted\("products\.db\.findAll",\s*Observation\.Context::new\)\s*\.?\s*observe\(\(\)\s*->\s*repo\.findAll\(\)\)\s*;'
+    pattern-regex: 'return\s+Observation\s*\.?\s*createNotStarted\("products\.db\.findAll",\s*observationRegistry\)\s*\.?\s*observe\(\(\)\s*->\s*repo\.findAll\(\)\)\s*;'

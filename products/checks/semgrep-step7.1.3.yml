@@ -1,0 +1,9 @@
+rules:
+  - id: step7.1.2-import-observation
+    languages: [java]
+    severity: ERROR
+    message: "Step 7.1 incomplete: Add import io.micrometer.observation.Observation;"
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductController.java
+    pattern: import io.micrometer.observation.ObservationRegistry;

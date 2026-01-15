@@ -1,0 +1,9 @@
+rules:
+  - id: step7.2.1-add-field
+    languages: [java]
+    severity: ERROR
+    message: "Step 7.2.1 incomplete: Add private final ObservationRegistry observationRegistry; to constructor"
+    paths:
+      include:
+        - src/main/java/com/example/products/api/ProductController.java
+    pattern: "private final ObservationRegistry observationRegistry;"

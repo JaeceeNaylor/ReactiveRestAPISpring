@@ -5,8 +5,10 @@ import com.example.products.repository.ProductRepository;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 import io.micrometer.observation.annotation.Observed;
 import io.micrometer.observation.Observation;
+import io.micrometer.observation.ObservationRegistry;
 
 import java.time.Duration;
 
@@ -15,9 +17,11 @@ import java.time.Duration;
 public class ProductController {
 
     private final ProductRepository repo;
+    private final ObservationRegistry observationRegistry;
 
-    public ProductController(ProductRepository repo) {
+    public ProductController(ProductRepository repo, ObservationRegistry observationRegistry) {
         this.repo = repo;
+        this.observationRegistry = observationRegistry;
     }
 
     @Observed(name = "products.http.getAll")
@@ -40,7 +44,7 @@ public class ProductController {
     @GetMapping("/db-observe")
     public Flux<Product> getAllObserved() {
         return Observation
-            .createNotStarted("products.db.findAll", Observation.Context::new)
+            .createNotStarted("products.db.findAll", observationRegistry)
             .observe(() -> repo.findAll());
     }
 }
